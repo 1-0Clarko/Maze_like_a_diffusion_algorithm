@@ -267,6 +267,7 @@ class NPC:
             print("Chicken dead")
             pygame.mixer.Sound.play(ChickenDead)
             ThePlayer.AddItemToInventory("Chicken")
+            CeckIfThechickenAre0()
 
     def TakeDameg(self):
         if self.Type == "g":
@@ -345,6 +346,7 @@ def StartLoop(StartSquare, GoalSquare, WalkableSquaresList, LabSize):
         VisualaizeTerrein()
         VisualizeCharacters()
         
+        VisualizeN_Chicken()
         VisualizeInventory()
         global FramesWater
         FramesWater = FramesWater + 1
@@ -386,6 +388,8 @@ def VisualizeInventory():
     for i in range(len(ThePlayer.Inventory)):
         ItemName = list(ThePlayer.Inventory.keys())[i]
         DrawText(ItemName+" x"+str(ThePlayer.Inventory[ItemName]), BegningFont, (255, 255, 255), 30, 30, Display=False)
+def VisualizeN_Chicken():
+    DrawText("There are "+str(len(Animals))+" chickens in this world", BegningFont, (255, 255, 255), DisplayWidth-400, 30, Display=False)
 
 def ControllaSeE_NelRaggioVisivo(pos):
     h = 0
@@ -405,6 +409,7 @@ def Punch(Attacker):
     display_particle(DisplayWidth/2-20, DisplayHeight/2-20, random.choices(HumanPunchesEffects)[0], 100, 35, -ThePlayer.angle, 100)
     pygame.mixer.Sound.play(random.choices(PunchesInAirSounds)[0])
 
+    
 def GameInit():
     pygame.init()
 def Disolvence():
@@ -420,6 +425,12 @@ def Disolvence():
         UpdateDisplay()
         if fade_alpha == 7:
             break
+def CeckIfThechickenAre0():
+    if ThePlayer.Inventory["Chicken"] == len(Animals):
+        Disolvence()
+        DrawText("You won", BegningFont, (51, 221, 112), DisplayWidth/2-100, DisplayHeight/2-30)
+        WaitA_Click()
+        Quit()
 
 def WaitA_Click():
     HasBeenDown = False
