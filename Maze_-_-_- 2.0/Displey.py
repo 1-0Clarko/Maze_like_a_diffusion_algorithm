@@ -148,11 +148,12 @@ def DrawText(text, font, text_col, x, y, Display = True):
     
 def PlayDistanceEffectedAudio(Sound, pos1, pos2, Mult = 1.0):
     Distance = pow(pow((pos2[0] - pos1[0]), 2) + pow((pos2[1] - pos1[1]), 2), 1/2)
-    Volume = max(-Distance + MaxHearingRange, 0)
-    Volume = Volume / MaxHearingRange
-    sound = pygame.mixer.Sound(Sound)
-    sound.set_volume(Volume * Mult)
-    sound.play()
+    if -Distance + MaxHearingRange > 0:
+        Volume = -Distance + MaxHearingRange
+        Volume = Volume / MaxHearingRange
+        sound = pygame.mixer.Sound(Sound)
+        sound.set_volume(Volume * Mult)
+        sound.play()
 
 def UdateCamerOffset(Movment):
     global CameraMovementInFrame
