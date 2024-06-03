@@ -1,6 +1,14 @@
+V3:
+# Game_like_a_wave_function_collapse
+New gameplay systems are been worked on
+
+V2:
+# Game_like_a_wave_function_collapse
+Now it's a game, playable by downloading the build folder and opening the exe
+
 V1:
-# Maze_like_a_wave_Wave_Function_Collapse
-A simple maze/pixel diffusion generator in python using the graphics library(by John Zelle).
+# Maze_like_a_wave_function_collapse
+A simple maze/pixel function collapse generator in python using the graphics library(by John Zelle).
 
 It strat by generating the optimal path between the start and the gool and then it mutate it a number of time.
 you can easly cange parameters like LabSize, NumMutations, TimePerMutation, or the mutations in Rules.py
@@ -17,5 +25,3 @@ https://github.com/1-0Clarko/Maze_like_a_diffusion_algorithm/assets/157540837/f9
 
 the little squares white and red represent respectively if a walkable square is been already mutated in all the possible way or not.
 the fact that in the video there are white squares in not walkable spots is a bug thet es been olready resolved.
-V2:
-Now is an auto generated catch the chicken game, playable in a few clicks with the executable.
