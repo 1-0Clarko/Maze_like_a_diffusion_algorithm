@@ -5,6 +5,9 @@ New gameplay systems are been worked on
 V2:
 # Game_like_a_wave_function_collapse
 Now it's a game, playable by downloading the build folder and opening the exe
+![Python 3 12 03_06_2024 17_30_04](https://github.com/1-0Clarko/Maze_like_a_diffusion_algorithm/assets/157540837/e0329254-e453-4e22-9e56-6875fb487c99)
+![Python 3 12 03_06_2024 17_29_38](https://github.com/1-0Clarko/Maze_like_a_diffusion_algorithm/assets/157540837/2f458a2c-f38b-44ae-b019-a4a35de8ebf5)
+
 
 V1:
 # Maze_like_a_wave_function_collapse
